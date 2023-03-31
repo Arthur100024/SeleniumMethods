@@ -49,6 +49,10 @@ public class Methods {
                 .build().perform();
     }
 
+    public static void doubleClick(WebDriver driver, WebElement element){
+        new Actions(driver).doubleClick(element).perform();
+    }
+
     public static void addNewTab(WebDriver driver, JavascriptExecutor js, int tab_num){
         opened_window = tab_num;
         js.executeScript("window.open()");
